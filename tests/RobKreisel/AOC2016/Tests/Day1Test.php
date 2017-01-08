@@ -19,6 +19,10 @@ class Day1Test extends PHPUnit_Framework_TestCase
         $this->object = new Day1();
     }
 
+    public function testUpdatePosition()
+    {
+        $this->assertEquals([5, 0, 'E'], $this->object->updatePosition([2, 0, 'S'], 'L3'));
+    }
     public function testCalculateGridDistance()
     {
         $this->assertEquals(5, $this->object->calculateGridDistance([0,0],[-2,3]));

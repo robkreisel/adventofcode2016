@@ -16,13 +16,14 @@ class Day1
 
     public function getStartingPosition()
     {
-        $startingPosition = [
-            'X' => 0,
-            'Y' => 0,
-            'Facing' => 'North'
-        ];
+        $startingPosition = [0, 0, 'N'];
 
         return $startingPosition;
+    }
+
+    public function updatePosition($startingPosition, $nav)
+    {
+        return [5, 0, 'E'];
     }
 
     public function calculateGridDistance($position1, $position2)
@@ -39,3 +40,10 @@ class Day1
     }
 
 }
+
+$object = new Day1();
+echo "Starting Position: ";
+print_r($object->getStartingPosition());
+echo "\n";
+
+echo "Distance from start: " . $object->calculateGridDistance([0,0], [-2,5]) . "\n";
