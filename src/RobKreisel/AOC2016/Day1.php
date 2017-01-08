@@ -13,12 +13,29 @@ class Day1
 // choose starting navigation point [0,0]
 // interpret navigation to update position
 // determine final position
-// determine distance from starting point to final position
+
+    public function getStartingPosition()
+    {
+        $startingPosition = [
+            'X' => 0,
+            'Y' => 0,
+            'Facing' => 'North'
+        ];
+
+        return $startingPosition;
+    }
 
     public function calculateGridDistance($position1, $position2)
     {
         // Distance from (P1x,P1y) to (P2x,P2y) = | P1x - p2x | + | P1y -P2y |
-        return 5;
+        $P1x = $position1[0];
+        $P1y = $position1[1];
+        $P2x = $position2[0];
+        $P2y = $position2[1];
+
+        $distance = abs($P1x - $P2x) + abs($P1y - $P2y);
+
+        return $distance;
     }
 
 }
