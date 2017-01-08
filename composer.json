@@ -1,27 +1,29 @@
 {
-    "name": "johnkary/php-skeleton",
-    "description": "Base project skeleton for a PSR-0 compliant PHP 5.3 project",
-    "keywords": ["skeleton"],
-    "homepage": "https://github.com/johnkary/skeleton",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "John Kary",
-            "email": "john@johnkary.net",
-            "homepage": "http://johnkary.net",
-            "role": "Developer"
-        }
-    ],
-    "minimum-stability": "stable",
-    "require": {
-        "php": ">=5.3.3"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "3.7.*"
-    },
-    "autoload": {
-        "psr-0": {
-            "": "src/"
-        }
+  "name": "robkreisel/php-skeleton",
+  "description": "Base project skeleton for a PSR-0 compliant PHP 7.1 project",
+  "keywords": [
+    "skeleton"
+  ],
+  "homepage": "https://github.com/robkreisel/skeleton",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Rob Kreisel",
+      "email": "rob@design1010.com",
+      "homepage": "http://design1010.com",
+      "role": "Developer"
     }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "php": ">=7.1"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "5.7.*"
+  },
+  "autoload": {
+    "psr-0": {
+      "": "src/"
+    }
+  }
 }
