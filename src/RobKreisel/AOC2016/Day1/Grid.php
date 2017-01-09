@@ -88,7 +88,6 @@ class Grid
 
     public function calculateGridDistance($position1, $position2)
     {
-        // Distance from (P1x,P1y) to (P2x,P2y) = | P1x - p2x | + | P1y -P2y |
         $P1x = $position1[0];
         $P1y = $position1[1];
         $P2x = $position2[0];
