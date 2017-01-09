@@ -9,6 +9,7 @@ use RobKreisel\AOC2016\Day1;
 
 class Day1Test extends PHPUnit_Framework_TestCase
 {
+
     /**
      * @var Day1
      */
@@ -19,12 +20,19 @@ class Day1Test extends PHPUnit_Framework_TestCase
         $this->object = new Day1();
     }
 
+    public function testInitializePosition()
+    {
+        $this->assertEquals([0,0,'N'], $this->object->initializePosition());
+    }
+
     public function testUpdatePosition()
     {
         $this->assertEquals([5, 0, 'E'], $this->object->updatePosition([2, 0, 'S'], 'L3'));
     }
+
     public function testCalculateGridDistance()
     {
         $this->assertEquals(5, $this->object->calculateGridDistance([0,0],[-2,3]));
     }
+
 }

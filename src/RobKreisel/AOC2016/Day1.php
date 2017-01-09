@@ -14,11 +14,13 @@ class Day1
 // interpret navigation to update position
 // determine final position
 
-    public function getStartingPosition()
-    {
-        $startingPosition = [0, 0, 'N'];
+    public $startingPosition;
+    public $currentPosition;
 
-        return $startingPosition;
+
+    public function initializePosition()
+    {
+        return [0, 0, 'N'];;
     }
 
     public function updatePosition($startingPosition, $nav)
@@ -43,7 +45,7 @@ class Day1
 
 $object = new Day1();
 echo "Starting Position: ";
-print_r($object->getStartingPosition());
+print_r($object->initializePosition());
 echo "\n";
 
 echo "Distance from start: " . $object->calculateGridDistance([0,0], [-2,5]) . "\n";
