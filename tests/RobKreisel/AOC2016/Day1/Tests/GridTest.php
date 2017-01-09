@@ -22,7 +22,7 @@ class GridTest extends PHPUnit_Framework_TestCase
 
     public function testInitializePosition()
     {
-        $this->assertEquals([0,0,'N'], $this->object->initializePosition());
+        $this->assertEquals([0,0,'N'], $this->object->getStartingPosition());
     }
 
     public function testUpdatePosition()

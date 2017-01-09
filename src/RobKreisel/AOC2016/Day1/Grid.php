@@ -17,10 +17,36 @@ class Grid
     public $startingPosition;
     public $currentPosition;
 
-
-    public function initializePosition()
+    /**
+     * Get startingPosition
+     *
+     * @return mixed
+     */
+    public function getStartingPosition()
     {
-        return [0, 0, 'N'];;
+        return $this->startingPosition;
+    }
+
+    /**
+     * Get currentPosition
+     *
+     * @return mixed
+     */
+    public function getCurrentPosition()
+    {
+        return $this->currentPosition;
+    }
+
+    public function __construct()
+    {
+        $this->initializePositions();
+    }
+
+    public function initializePositions()
+    {
+        $initialPosition = [0, 0, 'N'];
+        $this->startingPosition = $initialPosition;
+        $this->currentPosition = $initialPosition;
     }
 
     public function updatePosition($startingPosition, $nav)
