@@ -27,7 +27,8 @@ class GridTest extends PHPUnit_Framework_TestCase
 
     public function testUpdatePosition()
     {
-        $this->assertEquals([5, 0, 'E'], $this->object->updatePosition([2, 0, 'S'], 'L3'));
+        $this->object->updatePosition('L3');
+        $this->assertEquals([5, 0, 'E'], $this->object->getCurrentPosition());
     }
 
     public function testCalculateGridDistance()

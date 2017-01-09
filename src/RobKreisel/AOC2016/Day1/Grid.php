@@ -14,8 +14,8 @@ class Grid
 // interpret navigation to update position
 // determine final position
 
-    public $startingPosition;
-    public $currentPosition;
+    private $startingPosition;
+    private $currentPosition;
 
     /**
      * Get startingPosition
@@ -49,8 +49,9 @@ class Grid
         $this->currentPosition = $initialPosition;
     }
 
-    public function updatePosition($startingPosition, $nav)
+    public function updatePosition($nav)
     {
+
         return [5, 0, 'E'];
     }
 
