@@ -42,10 +42,3 @@ class Grid
     }
 
 }
-
-$object = new Grid();
-echo "Starting Position: ";
-print_r($object->initializePosition());
-echo "\n";
-
-echo "Distance from start: " . $object->calculateGridDistance([0,0], [-2,5]) . "\n";
