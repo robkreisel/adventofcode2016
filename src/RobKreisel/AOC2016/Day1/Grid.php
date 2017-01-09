@@ -51,10 +51,8 @@ class Grid
 
     public function updatePosition($nav)
     {
-        $n = str_split($nav);
-
-        $leftRight = $n[0];
-        $distance = $n[1];
+        $leftRight = substr($nav, 0, 1);
+        $distance = substr($nav, 1);
         $facing = $this->currentPosition[2];
 
         if ($facing == 'N') {
