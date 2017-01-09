@@ -1,23 +1,23 @@
 <?php
 
 
-namespace RobKreisel\AOC2016\Tests;
+namespace RobKreisel\AOC2016\Day1\Tests;
 
 
 use PHPUnit_Framework_TestCase;
-use RobKreisel\AOC2016\Day1;
+use RobKreisel\AOC2016\Day1\Grid;
 
-class Day1Test extends PHPUnit_Framework_TestCase
+class GridTest extends PHPUnit_Framework_TestCase
 {
 
     /**
-     * @var Day1
+     * @var Grid
      */
     private $object;
 
     public function setUp()
     {
-        $this->object = new Day1();
+        $this->object = new Grid();
     }
 
     public function testInitializePosition()
