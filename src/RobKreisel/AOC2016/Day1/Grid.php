@@ -51,8 +51,48 @@ class Grid
 
     public function updatePosition($nav)
     {
+        $n = str_split($nav);
 
-        return [5, 0, 'E'];
+        $leftRight = $n[0];
+        $distance = $n[1];
+        $facing = $this->currentPosition[2];
+
+        if ($facing == 'N') {
+            if ($leftRight == 'L') {
+                $this->currentPosition[2] = 'W';
+                $this->currentPosition[0] = $this->currentPosition[0] - $distance;
+            } else {
+                $this->currentPosition[2] = 'E';
+                $this->currentPosition[0] = $this->currentPosition[0] + $distance;
+            }
+        }
+        if ($facing == 'S') {
+            if ($leftRight == 'L') {
+                $this->currentPosition[2] = 'E';
+                $this->currentPosition[0] = $this->currentPosition[0] + $distance;
+            } else {
+                $this->currentPosition[2] = 'W';
+                $this->currentPosition[0] = $this->currentPosition[0] - $distance;
+            }
+        }
+        if ($facing == 'E') {
+            if ($leftRight == 'L') {
+                $this->currentPosition[2] = 'N';
+                $this->currentPosition[1] = $this->currentPosition[1] + $distance;
+            } else {
+                $this->currentPosition[2] = 'S';
+                $this->currentPosition[1] = $this->currentPosition[1] - $distance;
+            }
+        }
+        if ($facing == 'W') {
+            if ($leftRight == 'L') {
+                $this->currentPosition[2] = 'S';
+                $this->currentPosition[1] = $this->currentPosition[1] - $distance;
+            } else {
+                $this->currentPosition[2] = 'N';
+                $this->currentPosition[1] = $this->currentPosition[1] + $distance;
+            }
+        }
     }
 
     public function calculateGridDistance($position1, $position2)
