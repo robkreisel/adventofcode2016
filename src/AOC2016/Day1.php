@@ -1,10 +1,10 @@
 <?php
 
 
-namespace RobKreisel\AOC2016\Day1;
+namespace AOC2016;
 
 
-class Grid
+class Day1
 {
 
     private $startingPosition;
